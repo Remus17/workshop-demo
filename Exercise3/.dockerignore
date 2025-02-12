@@ -1,0 +1,22 @@
+# directories
+**/bin/
+**/obj/
+**/out/
+**/.devcontainer/
+**/TestResults/
+**/k8s/
+**/.vscode/
+**/.vs/
+**/.idea/
+
+# files
+Dockerfile*
+Dockerfile.*
+**/*.trx
+**/*.md
+**/*.cmd
+**/*.code-workspace
+.git
+.gitignore
+**/appsettings.local.json
+**/*.txt
