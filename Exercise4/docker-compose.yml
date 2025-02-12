@@ -1,0 +1,19 @@
+﻿version: '3.8'
+
+services:
+  app:
+    image: exercise4
+    container_name: ex4
+    ports:
+      - "8080:8080" # Map container port 8080 to host port 8080
+    depends_on:
+      - redis # Ensure Redis starts before this service
+    environment:
+      - REDIS_HOST=redisserver
+      - REDIS_PORT=6379 # Redis default port
+
+  redis:
+    image: redis:latest
+    container_name: redisserver
+    ports:
+      - "6379:6379" # Map Redis default port
